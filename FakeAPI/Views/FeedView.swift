@@ -6,15 +6,18 @@ struct FeedView: View {
   var body: some View {
     VStack {
       if model.posts.isEmpty {
-
-        VStack {
-          Text("Nothing to see here")
-          
-          Button("Fetch Posts") {
+        
+        ContentUnavailableView {
+          Label("No posts yet", systemImage: "questionmark.app.dashed")
+        } description: {
+          Text("That is kind of boring")
+        } actions: {
+          Button("Refresh") {
             model.fetchPosts()
           }
+          .buttonStyle(.borderedProminent)
         }
-
+        
       } else {
         
         List(model.posts, id: \.id) { post in
