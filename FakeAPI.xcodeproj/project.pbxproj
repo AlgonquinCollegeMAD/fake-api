@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		105D02902AF2D5630016EE7D /* FakeAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D028F2AF2D5630016EE7D /* FakeAPIApp.swift */; };
-		105D02922AF2D5630016EE7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D02912AF2D5630016EE7D /* ContentView.swift */; };
+		105D02922AF2D5630016EE7D /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D02912AF2D5630016EE7D /* FeedView.swift */; };
 		105D02942AF2D5640016EE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105D02932AF2D5640016EE7D /* Assets.xcassets */; };
 		105D02982AF2D5640016EE7D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105D02972AF2D5640016EE7D /* Preview Assets.xcassets */; };
+		105D029F2AF2D6240016EE7D /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D029E2AF2D6240016EE7D /* PostModel.swift */; };
+		105D02A32AF2DCF60016EE7D /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D02A22AF2DCF60016EE7D /* FeedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		105D028C2AF2D5630016EE7D /* FakeAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105D028F2AF2D5630016EE7D /* FakeAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIApp.swift; sourceTree = "<group>"; };
-		105D02912AF2D5630016EE7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		105D02912AF2D5630016EE7D /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		105D02932AF2D5640016EE7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		105D02952AF2D5640016EE7D /* FakeAPI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FakeAPI.entitlements; sourceTree = "<group>"; };
 		105D02972AF2D5640016EE7D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		105D029E2AF2D6240016EE7D /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		105D02A22AF2DCF60016EE7D /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				105D028F2AF2D5630016EE7D /* FakeAPIApp.swift */,
-				105D02912AF2D5630016EE7D /* ContentView.swift */,
+				105D02A02AF2D6290016EE7D /* Models */,
+				105D02A12AF2D6BD0016EE7D /* Views */,
 				105D02932AF2D5640016EE7D /* Assets.xcassets */,
 				105D02952AF2D5640016EE7D /* FakeAPI.entitlements */,
 				105D02962AF2D5640016EE7D /* Preview Content */,
@@ -67,6 +72,23 @@
 				105D02972AF2D5640016EE7D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		105D02A02AF2D6290016EE7D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				105D029E2AF2D6240016EE7D /* PostModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		105D02A12AF2D6BD0016EE7D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				105D02912AF2D5630016EE7D /* FeedView.swift */,
+				105D02A22AF2DCF60016EE7D /* FeedViewModel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				105D02922AF2D5630016EE7D /* ContentView.swift in Sources */,
+				105D029F2AF2D6240016EE7D /* PostModel.swift in Sources */,
+				105D02922AF2D5630016EE7D /* FeedView.swift in Sources */,
+				105D02A32AF2DCF60016EE7D /* FeedViewModel.swift in Sources */,
 				105D02902AF2D5630016EE7D /* FakeAPIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
