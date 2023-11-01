@@ -5,13 +5,13 @@ struct FeedView: View {
   
   var body: some View {
     VStack {
-      if model.isLoading {
+      switch model.viewState {
+        
+      case .loading:
         ProgressView {
           Text("Loading posts...")
         }
-      }
-      
-      else if model.posts.isEmpty {
+      case .empty:
         ContentUnavailableView {
           Label("No posts yet", systemImage: "questionmark.app.dashed")
         } description: {
@@ -22,10 +22,8 @@ struct FeedView: View {
           }
           .buttonStyle(.borderedProminent)
         }
-      }
-      
-      else {
-        List(model.posts, id: \.id) { post in
+      case .idle(let posts):
+        List(posts, id: \.id) { post in
           VStack(alignment: .leading) {
             
             Text(post.title)
