@@ -9,7 +9,7 @@ class FeedViewModel: ObservableObject {
     URLSession.shared.dataTask(with: url) { data, response, error in
       if let data = data {
         if let decodedPosts = try? JSONDecoder().decode([PostModel].self, from: data) {
-          DispatchQueue.main.sync() {
+          DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
             self.posts = decodedPosts
           }
         }
